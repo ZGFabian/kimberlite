@@ -36,23 +36,17 @@ kimberlite_pal <- function(palette="coolors", alpha = 1, reverse = FALSE) {
 #'
 #' @param ... additional arguments to pass to scale_color_gradientn
 #'
-#' @inheritParams viridis::scale_color_viridis
+# #' @inheritParams viridis::scale_color_viridis
 #'
 #' @importFrom ggplot2 scale_colour_manual
 #'
 #' @examples
+#' library(kimberlite)
 #' library(ggplot2)
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point(aes(colour = factor(cyl))) +
-#'   scale_colour_kimberlite(palette="coolors")
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point(aes(colour = hp)) +
-#'   scale_colour_kimberlite(palette="eureka", discrete = FALSE)
-#' ggplot(data = mpg) +
-#'   geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-#'   scale_colour_kimberlite(palette="orange_river")
-#' ggplot(diamonds) + geom_bar(aes(x = cut, fill = clarity)) +
-#'   scale_fill_kimberlite()
+#' ggplot(diamonds, aes(x=carat, y=price, color = clarity)) +
+#'   geom_point() +
+#'   scale_color_kimberlite() +
+#'   labs(title = "default: coolors")
 #' @export
 #'
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn

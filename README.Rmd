@@ -47,8 +47,11 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(kimberlite)
 library(ggplot2)
-
 ## basic example code
+ggplot(diamonds, aes(x=carat, y=price, color = clarity)) +
+  geom_point() +
+  scale_color_kimberlite() +
+  labs(title = "default: coolors")
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
