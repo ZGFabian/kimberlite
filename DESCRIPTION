@@ -1,0 +1,16 @@
+Package: kimberlite
+Title: Kimberlite Colour Palettes for R Graphics
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Zoltán",
+           family = "Fábián",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Provides color palettes.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: ggplot2, grDevices, graphics
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
