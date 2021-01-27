@@ -1,13 +1,12 @@
 Package: kimberlite
 Title: Kimberlite Colour Palettes for R Graphics
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     person(given = "Zoltán",
            family = "Fábián",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Provides color palettes.
+           role = c("cre", "ctb"),
+           email = "zgfabian@gmail.com")
+Description: Kimberlite R package provides color palettes for R graphics and color functions for ggplot2. This package based on a fork of ochRe package (https://github.com/ropenscilabs/ochRe).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Imports: ggplot2, grDevices, graphics

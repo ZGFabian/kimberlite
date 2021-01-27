@@ -26,7 +26,7 @@ over the vector of colours in the chosen palette.
 \examples{
 viz_palette(kimberlite_palettes$coolors)
 viz_palette(kimberlite_palettes$coolors, "coolors")
-viz_palette(kimberlite_palettes$coolors, "coolors first 4", num = 4)
-viz_palette(kimberlite_palettes$coolors, "coolors interpolated to 25", num = 25)
+viz_palette(kimberlite_palettes$coolors, "first 4 colors of coolors palette", num = 4)
+viz_palette(kimberlite_palettes$coolors, "coolors 5 basic colors interpolated to 25", num = 25)
 
 }

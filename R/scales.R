@@ -1,10 +1,10 @@
-#' kimberlite palette with ramped colours
+#' kimberlite palette with ramped (interpolated) colours
 #'
 #' @param palette Choose from 'kimberlite_palettes' list
 #'
-#' @param alpha transparency
-#'
 #' @param reverse If TRUE, the direction of the colours is reversed.
+#'
+#' @param ... Other arguments passed to colorRampPalette()
 #'
 #' @examples
 #' \dontrun{
@@ -14,12 +14,12 @@
 #' filled.contour(volcano,color.palette = kimberlite_pal(), asp=1)
 #' }
 #' @export
-kimberlite_pal <- function(palette="coolors", alpha = 1, reverse = FALSE) {
+kimberlite_pal <- function(palette="coolors", reverse = FALSE, ...) {
     pal <- kimberlite_palettes[[palette]]
     if (reverse){
         pal <- rev(pal)
     }
-    return(colorRampPalette(pal, alpha))
+    return(colorRampPalette(pal))
 }
 
 #' Setup colour palette for ggplot2
@@ -29,8 +29,6 @@ kimberlite_pal <- function(palette="coolors", alpha = 1, reverse = FALSE) {
 #' @param palette Choose from 'kimberlite_palettes' list
 #'
 #' @param reverse logical, Reverse the order of the colours?
-#'
-#' @param alpha transparency
 #'
 #' @param discrete whether to use a discrete colour palette
 #'
@@ -50,16 +48,15 @@ kimberlite_pal <- function(palette="coolors", alpha = 1, reverse = FALSE) {
 #' @export
 #'
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
-scale_color_kimberlite <- function(..., palette="coolors",
-                              discrete = TRUE, alpha = 1, reverse = FALSE) {
+scale_color_kimberlite <- function(palette="coolors", discrete = TRUE, reverse = FALSE, ...) {
    if (discrete) {
-       discrete_scale("colour", "kimberlite", palette=kimberlite_pal(palette, alpha = alpha, reverse = reverse))
-   } else {
-       scale_color_gradientn(colours = kimberlite_pal(palette, alpha = alpha, reverse = reverse, ...)(256))
+       discrete_scale(aesthetics = "colour", scale_name = "kimberlite", palette=kimberlite_pal(palette, reverse = reverse))
    }
-    #scale_colour_manual(values=kimberlite_palettes[[palette]])
+   else {
+      scale_color_gradientn(colours = kimberlite_pal(palette, reverse = reverse, ...)(256),
+                           values = c(1.0,0.8,0.6,0.4,0.2,0))
+   }
 }
-
 #' @rdname scale_color_kimberlite
 #' @export
 scale_colour_kimberlite <- scale_color_kimberlite

@@ -2,19 +2,19 @@
 % Please edit documentation in R/scales.R
 \name{kimberlite_pal}
 \alias{kimberlite_pal}
-\title{kimberlite palette with ramped colours}
+\title{kimberlite palette with ramped (interpolated) colours}
 \usage{
-kimberlite_pal(palette = "coolors", alpha = 1, reverse = FALSE)
+kimberlite_pal(palette = "coolors", reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{Choose from 'kimberlite_palettes' list}
 
-\item{alpha}{transparency}
-
 \item{reverse}{If TRUE, the direction of the colours is reversed.}
+
+\item{...}{Other arguments passed to colorRampPalette()}
 }
 \description{
-kimberlite palette with ramped colours
+kimberlite palette with ramped (interpolated) colours
 }
 \examples{
 \dontrun{
