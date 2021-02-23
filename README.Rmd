@@ -24,13 +24,13 @@ knitr::opts_chunk$set(
 > spawned a diamond rush and the digging of the open-pit mine called the Big Hole."
 > [Wikipedia: Kimberlite](https://en.wikipedia.org/wiki/Kimberlite)
 
-![](man/figures/kimberlite-rock.jpg)
+![kimberlite-rock](man/figures/kimberlite-rock.jpg)
 
 Hypabyssal facies diamondiferous kimberlite at the Sloan Ranch, Colorado.\
 Source: [diamondprospector.webs.com](https://diamondprospector.webs.com/kimberlite.htm)
 
 
-This package is not more than a fork of [ochRe](https://github.com/ropenscilabs/ochRe) package. The goal of kimberlite is to create some named color palettes for ggplot2 and base R graphics. 
+This package is not more than a fork of [ochRe](https://github.com/ropenscilabs/ochRe) package. The goal of kimberlite is to create some named color palettes for ggplot2 and base R graphics. As the name suggest palettes were inspired by kimberlites and diamonds. 
 
 ## Installation
 
@@ -44,28 +44,17 @@ devtools::install_github("zgfabian/kimberlite")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r, example}
 library(kimberlite)
 library(ggplot2)
 ## basic example code
 ggplot(diamonds, aes(x=carat, y=price, color = clarity)) +
   geom_point() +
   scale_color_kimberlite() +
+  theme_kimberlite() +
   labs(title = "default: coolors")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Currently for palettes are available via `kimberlite_pal()` function.
 
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+![all kimberlite palettes](./man/figures/patchwork.svg)
