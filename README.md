@@ -1,30 +1,32 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+
+[![GitHub
+issues](https://img.shields.io/github/issues/ZGFabian/kimberlite)](https://github.com/ZGFabian/kimberlite/issues)
+<!-- badges: end -->
 
 # kimberlite
 
-<!-- badges: start -->
-<!-- badges: end -->
-
-> “Kimberlite is an igneous rock, which sometimes contains diamonds. It
-> is named after the town of Kimberley in South Africa, where the
-> discovery of an 83.5-carat (16.70 g) diamond called the Star of South
-> Africa in 1869 spawned a diamond rush and the digging of the open-pit
-> mine called the Big Hole.” [Wikipedia:
+> “**Kimberlite** is an igneous rock, which sometimes contains diamonds.
+> It is named after the town of Kimberley in South Africa, where the
+> discovery of a (…) diamond called the Star of South Africa in 1869
+> spawned a diamond rush and the digging of the open-pit mine called the
+> Big Hole.” [Wikipedia:
 > Kimberlite](https://en.wikipedia.org/wiki/Kimberlite)
 
 ![kimberlite-rock](man/figures/kimberlite-rock.jpg)
 
-Hypabyssal facies diamondiferous kimberlite at the Sloan Ranch,
+Image: Hypabyssal facies diamondiferous kimberlite at the Sloan Ranch,
 Colorado.  
 Source:
 [diamondprospector.webs.com](https://diamondprospector.webs.com/kimberlite.htm)
 
-This package is not more than a fork of
-[ochRe](https://github.com/ropenscilabs/ochRe) package. The goal of
+This package is a fork of
+[**ochRe**](https://github.com/ropenscilabs/ochRe) library. The goal of
 kimberlite is to create some named color palettes for ggplot2 and base R
 graphics. As the name suggest palettes were inspired by kimberlites and
-diamonds.
+diamonds. It is also provides `theme_kimberlite`.
 
 ## Installation
 
